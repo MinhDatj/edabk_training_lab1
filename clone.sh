@@ -8,3 +8,4 @@ git clone https://github.com/MinhDatj/hello_test.git
 
 #cd /home/datj/training/hello_test
 cd hello_test
+#remember to use . ./run.sh instead ./run.sh
