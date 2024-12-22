@@ -14,7 +14,8 @@ typedef struct Person {
 
 FILE* fptr;
 //const char* file = "D:\\Visual Studio Project\\C++\\LL_PracticeDemo\\Name.txt";
-const char* file = "D:\\C++ projects (devcpp)\\Projects\\LinkList\\userName.txt";
+//const char* file = "D:\\C++ projects (devcpp)\\Projects\\LinkList\\userName.txt";
+const char* file = "./name.txt";
 
 #define SIZE 50
 int i = 0;
@@ -176,7 +177,8 @@ int readFromFile(Person** head, const char* filename) {
 	fptr = fopen(filename, "r");
     if (fptr == NULL) {
         printf("\tFile doesn't exist\n");
-        return 0;
+        printf("Creating it now..\n", filename);
+        fptr = fopen(filename, "w");
     }
 
 	while (fgets(name, SIZE, fptr)) {
@@ -294,7 +296,7 @@ int testingDemo1() {
 			break;
 
 		case 8:
-            printf("The file that stores the names is located at: %s\n", file);
+			printf("The file that stores the names is located at: %s\n", file);	
             break;
 
 		default:
