@@ -1,11 +1,6 @@
 #!/bin/bash
 
-rm -rf hello_test
-git clone https://github.com/MinhDatj/hello_test.git
+#SOURCE=$1
+git clone "$1" && cd "$(basename "$1" .git)"
 
-#alias path="cd /home/datj/training/hello_test"
-#cd ~/path
-
-#cd /home/datj/training/hello_test
-cd hello_test
-#remember to use . ./run.sh instead ./run.sh
+#run and automatically cd into your repo by ". ./clone.sh <repo_name>"
