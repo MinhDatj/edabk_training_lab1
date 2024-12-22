@@ -1,11 +1,15 @@
 #!/bin/bash
 
-rm -rf hello_test
-git clone https://github.com/MinhDatj/hello_test.git
+#SOURCE=$1
+git clone $1
 
-#alias path="cd /home/datj/training/hello_test"
-#cd ~/path
+REPO_NAME=$(basename "$1" .git)
 
-#cd /home/datj/training/hello_test
-cd hello_test
-#remember to use . ./run.sh instead ./run.sh
+if [ -d "$REPO_NAME" ]; then
+	echo "successfully cloned into $REPO_NAME"
+	cd "$REPO_NAME" || exit
+	echo "Now in directory: $(pwd)"
+else 
+	echo "Failed to clone reposistory."
+	exit 1
+fi
