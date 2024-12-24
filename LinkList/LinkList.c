@@ -14,7 +14,8 @@ typedef struct Person {
 
 FILE* fptr;
 //const char* file = "D:\\Visual Studio Project\\C++\\LL_PracticeDemo\\Name.txt";
-const char* file = "D:\\C++ projects (devcpp)\\Projects\\LinkList\\userName.txt";
+//const char* file = "D:\\C++ projects (devcpp)\\Projects\\LinkList\\userName.txt";
+const char* file = "./name.txt";
 
 #define SIZE 50
 int i = 0;
@@ -176,6 +177,8 @@ int readFromFile(Person** head, const char* filename) {
 	fptr = fopen(filename, "r");
     if (fptr == NULL) {
         printf("\tFile doesn't exist\n");
+        printf("Creating file '%s' now...\n", filename);
+        fptr = fopen(filename, "w"); 
         return 0;
     }
 
