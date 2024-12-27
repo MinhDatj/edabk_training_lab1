@@ -177,7 +177,7 @@ int readFromFile(Person** head, const char* filename) {
 	fptr = fopen(filename, "r");
     if (fptr == NULL) {
         printf("\tFile doesn't exist\n");
-        printf("Creating it now..\n", filename);
+        printf("Creating it now..\n");
         fptr = fopen(filename, "w");
     }
 
