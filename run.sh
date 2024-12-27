@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./LinkList.exe
+./LinkList

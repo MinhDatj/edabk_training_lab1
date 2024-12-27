@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gcc LinkList/LinkList.c -o LinkList.exe
+gcc LinkList/LinkList.c -o LinkList
 
-echo "Compilation completed! Program's location is: $(pwd)/LinkList.exe"
+echo "Compilation completed! Program's location is: $(pwd)/LinkList"
 

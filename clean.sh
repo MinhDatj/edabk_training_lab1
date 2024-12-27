@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file1="LinkList.exe"
+file1="LinkList"
 file2="name.txt"
 if [ -f "$file1" ]; then
 	rm "$file1"
